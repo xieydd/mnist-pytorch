@@ -1,4 +1,5 @@
 from __future__ import print_function
+import time
 
 import argparse
 import os
@@ -154,5 +155,8 @@ def main():
         torch.save(model.state_dict(),"mnist_cnn.pt")
 
 if __name__ == '__main__':
+    start_time = time.time()
     main()
+    duration_time = time.time() - start_time
+    print(duration_time)
 
